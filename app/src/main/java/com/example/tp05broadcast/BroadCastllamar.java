@@ -11,10 +11,7 @@ public class BroadCastllamar extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
 
-        Intent in= new Intent(Intent.ACTION_CALL);
-        in.setData(Uri.parse(("tel:2664553747")));
-        in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        context.startActivity(in);
+       llamar(context);
     }
 
     public void llamar( Context context) {
@@ -23,5 +20,9 @@ public class BroadCastllamar extends BroadcastReceiver {
         in.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(in);
 
+
+
     }
+
+
 }
